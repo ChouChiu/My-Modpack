@@ -8,16 +8,19 @@ permissions:
   contents: write
 
 jobs:
-  release:
-    runs-on: windows-latest
+  build:
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
 
+      - name: Give Permissiom
+        run: chmod +x srdk
+
       - name: Build mrpack
-        run: ./srdk.exe build
+        run: ./srdk build
 
       - name: Build offline mrpack
-        run: ./srdk.exe build_offline
+        run: ./srdk build_offline
 
       - uses: softprops/action-gh-release@v2
         with:
