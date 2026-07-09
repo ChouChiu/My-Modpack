@@ -1,7 +1,5 @@
 import shulker.modrinth
 flat ./src/mods %project.cache%/overrides/mods
-copy ./options.txt %project.cache%/overrides/options.txt false
-copy ./src/config %project.cache%/overrides/config true
 copy ./src/resourcepacks %project.cache%/overrides/resourcepacks true
 copy ./src/shaderpacks %project.cache%/overrides/shaderpacks true
 mrp e %project.cache%/overrides %project.cache%/modrinth.index.json true
